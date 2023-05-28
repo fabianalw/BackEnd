@@ -1,23 +1,26 @@
-/vendor/
-node_modules/
-npm-debug.log
-yarn-error.log
+# Laravel storage folder
+/storage/*
 
-# Laravel 4 specific
-bootstrap/compiled.php
-app/storage/
+# Laravel vendor folder
+/vendor/*
 
-# Laravel 5 & Lumen specific
-public/storage
-public/hot
+# Laravel mix specific files
+/public/css/*
+/public/js/*
 
-# Laravel 5 & Lumen specific with changed public path
-public_html/storage
-public_html/hot
-
-storage/*.key
+# Laravel environment file
 .env
-Homestead.yaml
-Homestead.json
-/.vagrant
-.phpunit.result.cache
+
+# Composer lock file
+composer.lock
+
+# Laravel log files
+*.log
+
+# IDE specific files
+.idea
+.vscode
+
+# Editor backup files
+*~
+*.swp

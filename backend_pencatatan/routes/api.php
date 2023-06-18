@@ -1,8 +1,13 @@
 <?php
 
+use App\Http\Controllers\API\datakelahiranController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\DataKelahiranController;
+
+
+use Illuminate\Support\Facades\Hash;
+
+
 
 
 /*
@@ -21,4 +26,9 @@ use App\Http\Controllers\DataKelahiranController;
 // });
 
 // Route::post('/login');
-Route::get('/data_kelahiran',[DataKelahiranController::class, 'index']);
+
+
+Route::get('data_kelahiran', [datakelahiranController::class, 'index']);
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return  $request->user();
+});

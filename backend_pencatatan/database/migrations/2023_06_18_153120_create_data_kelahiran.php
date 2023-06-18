@@ -11,10 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('table_data_kelahiran', function (Blueprint $table) {
-            $table->id('id_bayi');
-            $table->foreignId('id_bidan')->references('id_bidan')->on('table_bidan');
-            $table->string('nama_lengkap');
+        Schema::create('data_kelahiran', function (Blueprint $table) {
+            $table->id();
+            $table->string('nama_bayi');
             $table->string('nama_ibu');
             $table->string('alamat');
             $table->integer('no_hp');
@@ -25,6 +24,10 @@ return new class extends Migration
             $table->integer('berat_badan');
             $table->integer('lingkar_kepala');
             $table->integer('lingkar_dada');
+            $table->string('spartus');
+            $table->string('bidan');
+            $table->softDeletes();
+
             $table->timestamps();
         });
     }
@@ -34,6 +37,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('table_data_kelahiran');
+        Schema::dropIfExists('data_kelahiran');
     }
 };

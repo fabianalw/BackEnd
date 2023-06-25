@@ -26,8 +26,6 @@ return new class extends Migration
             $table->integer('lingkar_dada');
             $table->string('spartus');
             $table->string('bidan');
-            $table->softDeletes();
-
             $table->timestamps();
         });
     }

@@ -26,6 +26,9 @@ use Illuminate\Support\Facades\Hash;
 // });
 
 // Route::post('/login');
+use App\Http\Controllers\UserController;
+
+Route::get('/users', [UserController::class, 'index']);
 
 
 Route::get('data_kelahiran', [datakelahiranController::class, 'index']);

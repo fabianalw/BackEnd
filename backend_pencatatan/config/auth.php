@@ -40,6 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+    ],
 
     /*
     |--------------------------------------------------------------------------
@@ -61,13 +62,13 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-                'model' => App\Models\Bidan::class,
-            ],
+            'model' => App\Models\User::class,
         ],
-        'api' => [
-            'driver' => 'token',
-            'provider' => 'users',
-        ],
+
+        // 'users' => [
+        //     'driver' => 'database',
+        //     'table' => 'users',
+        // ],
     ],
 
     /*

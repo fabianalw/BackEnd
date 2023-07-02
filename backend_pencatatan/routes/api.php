@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\Api\KelahiranController;
+use App\Http\Controllers\Api\PemeriksaanController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +22,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-// Route::get('kelahiran', [KelahiranController::class, 'index']);
-// Route::post('kelahiran', [KelahiranController::class, 'store']);
-// Route::put('kelahiran/{id}', [KelahiranController::class, 'update']);
-// Route::delete('kelahiran/{id}', [KelahiranController::class, 'destroy']);
-// Route::get('kelahiran/{id}', [KelahiranController::class, 'show']);
+Route::get('pemeriksaan', [PemeriksaanController::class, 'index']);
+Route::post('pemeriksaan', [PemeriksaanController::class, 'store']);
+Route::put('pemeriksaan/{id}', [PemeriksaanController::class, 'update']);
+Route::delete('pemeriksaan/{id}', [PemeriksaanController::class, 'destroy']);
+Route::get('pemeriksaan/{id}', [PemeriksaanController::class, 'show']);
 
 Route::apiResource('kelahiran', KelahiranController::class);
+
+// Route::apiResource('pemeriksaan', PemeriksaanController::class);
